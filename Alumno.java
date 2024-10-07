@@ -6,12 +6,13 @@ public class Alumno {
     private double iot;
     private double promedio;
 
-     //constructor
+    // Constructor
     public Alumno(String m, String n) {
         this.matricula = m;
         this.nombre = n;
     }
 
+    // Getters y Setters
     public String getMatricula() {
         return matricula;
     }
@@ -36,11 +37,11 @@ public class Alumno {
         this.estructuras = estructuras;
     }
 
-    public double getIngels() {
+    public double getIngles() { // Corregido de "getIngels"
         return ingles;
     }
 
-    public void setIngels(double ingles) {
+    public void setIngles(double ingles) { // Corregido de "setIngels"
         this.ingles = ingles;
     }
 
@@ -56,15 +57,15 @@ public class Alumno {
         return promedio;
     }
 
-    public void setPromedio(double promedio) {
-        this.promedio = (this.estructuras + this.ingles + this.ingles + this.iot) / 3;
+    // Método para calcular el promedio
+    public void setPromedio() {
+        this.promedio = (this.estructuras + this.ingles + this.iot) / 3; // Ajustado el cálculo
     }
 
+    // Método para imprimir la información del alumno
     @Override
     public String toString() {
-        return "Alumno [matricula=" + matricula + ", nombre=" + nombre + ", promedio=" + promedio + "]";
+        return "Alumno [Matrícula: " + matricula + ", Nombre: " + nombre + ", Estructuras: " + estructuras +
+               ", Inglés: " + ingles + ", IoT: " + iot + ", Promedio: " + promedio + "]";
     }
-
-    
-
 }
